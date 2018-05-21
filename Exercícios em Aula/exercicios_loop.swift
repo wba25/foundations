@@ -325,11 +325,163 @@ if let n = Int(optionalStrN!) {
 
 */
 
+func mediaAte(final: Int) -> Double {
+    var sum = 0
+    var count = 0.0
+    for i in 1...final {
+        sum += i
+        count += 1
+    }
+    return Double(sum)/count
+}
+
 /*
  
  Dado um número N, fornecido pelo usuário, calcule todas as médias aritméticas dos números entre 1 e j, para todo número j tal que j <= N.
+
+let optionalStrN = readLine()
+if let n = Int(optionalStrN!) {
+    for i in 1...n {
+        print("Média 1 até \(i) é \(mediaAte(final: i))");
+    }
+}
+ 
+*/
+
+/*
+ 
+ Crie um programa que constrói uma tabela de multiplicação. Por exemplo, para um N = 4, a tabela de multiplicação correspondente é a seguinte:  Note que, em uma célula qualquer (x,y), o valor armazenado é igual a x * y. Seu programa deve receber o valor de N como entrada e produzir uma tabela como essa, organizada. Não se preocupe, porém, se o valor de N for grande demais para apresentar a tabela de forma arrumada.
+ 
+ 
+
+
+let optionalStrN = readLine()
+if let n = Int(optionalStrN!) {
+    for i in 1...n {
+        for j in 1...n {
+            print("\(i*j)", terminator: " ")
+        }
+        print("")
+    }
+}
+
+*/
+
+func getAsteristicos(quantidade: Int, caracteres: Int) -> String {
+    var output = ""
+    var i = 0
+    let spaces = round(Double(caracteres - quantidade * 2)/2)
+    
+    var k = 0.0
+    
+    while k < (spaces+1) {
+        output += " "
+        k += 1.0
+    }
+    
+    while i < quantidade {
+        output += "* "
+        i += 1
+    }
+    
+    return output
+}
+
+/*
+ 
+ Faça um programa que, dado um raio R, desenha apenas usando asteriscos um círculo cujo raio é R caracteres.
+ 
+ // Faz losango
+ 
+ 1
+ 1 + 1
+ ...
+ r
+ ...
+ 2r - 1
+ 2r
+ 2r - 1
+ ...
+ r
+ ...
+ 1 + 1
+ 1
+ 
+ // Circulo
+ 
+ (2*n)/3
+ ...
+ n*2 : 2*n/3 vezes
+ ...
+ (2*n)/3
+ 
+*/
+
+let optionalStrN = readLine()
+if let r = Int(optionalStrN!) {
+    
+    // Faz losango
+    var i = 1
+    while i <= r*2 {
+        print(getAsteristicos(quantidade: i, caracteres: r*4))
+        i += 1
+    }
+    
+    var j = r*2
+    while j >= 1 {
+        j -= 1
+        print(getAsteristicos(quantidade: j, caracteres: r*4))
+    }
+    
+    // Faz circulo
+    //let incremento = Int(sqrt(Double(r*r + x*x)))
+    //let incremento = (2*r)/3
+    let incremento = r / 3
+    
+    i = (2*r)/3
+    var nivel = 0
+    while i <= r*2 {
+        nivel = 1
+        while nivel <= 2 {
+            print(getAsteristicos(quantidade: i, caracteres: r*4))
+            nivel += 1
+        }
+        i += incremento
+    }
+    i -= incremento
+    print(getAsteristicos(quantidade: i, caracteres: r*4))
+    print(getAsteristicos(quantidade: i, caracteres: r*4))
+    print(getAsteristicos(quantidade: i, caracteres: r*4))
+    print(getAsteristicos(quantidade: i, caracteres: r*4))
+
+    j = i
+    while j >= (2*r)/3 {
+        nivel = 1
+        while nivel <= 2 {
+            print(getAsteristicos(quantidade: j, caracteres: r*4))
+            nivel += 1
+        }
+        j -= incremento
+    }
+    
+}
+
+
+
+/*
+ 
+ Implemente uma função bubbleSort em Swift
  
  */
+
+
+
+
+
+
+
+
+
 
 
 
