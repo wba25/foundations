@@ -16,7 +16,7 @@ import Foundation
  numérico ou nenhum dos dois. Se o string tiver mais que um caractere, seu programa deve imprimir
  uma mensagem de erro.
  
-*
+*/
 
 let input = readLine()!
  
@@ -36,14 +36,13 @@ else {
      }
 }
 
-*/
 
 // # atividade 2
 /*
 
  Construa um programa que lê três números a partir do teclado e ao final diz quantos desses são pares.
  
-*
+*/
 
 // a seguir, o optional foi aberto na força bruta, não é a forma adequada
 // o código foi implementado desta maneira com fins experimentais
@@ -68,7 +67,7 @@ if(Int(n3)!%2 == 0) {
 
 print (qtdPares)
  
-*/
+
 
 // # atividade 3
 /*

@@ -12,7 +12,7 @@ import Foundation
 /*
  
  Faça um programa que lê um número N maior que 1 a partir do teclado e calcula a soma de todos os números entre 1 e N.
- 
+ */
  
 var somatorio = 0
 let n = readLine()
@@ -26,13 +26,13 @@ if let strN = n {
         }
     }
 }
-*/
+
 
 /*
  
  Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz"
  
-
+*/
 
 for i in 1...100 {
     let c1 = i % 3 == 0
@@ -49,13 +49,12 @@ for i in 1...100 {
     }
     print(output)
 }
-*/
 
 /*
  
  Construa um programa que lê um número X a partir do teclado e verifica se ele é primo. Seu programa deve informar ao usuário se X é primo ou não.
  
-
+*/
 
 var isPrimo = true
 let optionalStrX = readLine()
@@ -80,12 +79,11 @@ if let strX = optionalStrX {
     }
 }
 
-*/
 
 /*
  
  Crie um programa que lê um número N do teclado e calcula o seu fatorial.
-
+*/
 // Recursivamente
 
 func fat(n: Int) -> Int {
@@ -113,13 +111,12 @@ if let strN = optinalStrN {
     }
 }
 
-*/
 
 /*
  
  Faça um programa que, dado um número lido a partir do teclado, calcula a soma de seus dígitos (independentemente do número de dígitos)
  
- 
+ */
 
 let optionalStrN = readLine()
 
@@ -134,12 +131,13 @@ if let strN = optionalStrN {
     print(sum)
 }
 
-*/
 
 /*
  
  Construa um programa que fica pedindo que o usuário digite números e os soma até que o usuário digite 0. Neste momento o programa deve imprimir o valor total da soma.
 
+ */
+ 
 var n = -1
 var sum = 0
 
@@ -154,13 +152,12 @@ while n != 0 {
 }
 print("Soma = \(sum)")
 
-*/
 
 /*
  
  Faça com que seu programa só aceite números a ser adivinhados entre 0 e 100. Enquanto os números não estiverem nesse intervalo, seu jogo deve continuar repetidamente pedindo que o número a ser adivinhado seja fornecido.
  
-
+*/
 var chances = 10
 var adivinhou = false
 
@@ -207,13 +204,14 @@ while((chances != 0) && (!adivinhou)) {
     chances -= 1
 }
 
-*/
 
 /*
  
  Construa um programa que lê um número inteiro N a partir do teclado e calcula a raiz cúbica inteira desse número, se houver. Caso não haja, ele deve informar isso ao usuário.
  
 // x(i+1) = 1/3 * ( 2 * x(i) + (n/(x(i)*x(i))) ) // método de newton
+
+ */
 
 func metodoNewton (valor: Int, valor_inicial_iteracao: Double, numero_iteracoes: Int) -> Double {
     var i = 0
@@ -244,12 +242,11 @@ if let n = Int(optionalStrN!) {
     }
 }
 
- */
 
 /*
  
  A sequência de Fibonacci é dada por     fib(0) = 1    fib(1) = 1    fib(n) = fib(n-1) + fib(n-2)  Faça um programa que, dado um número n, calcula o fib(n).
- 
+ */
  
 
 func fib(n: Int) -> Int {
@@ -266,7 +263,6 @@ let optionalStrN = readLine()
 if let n = Int(optionalStrN!) {
     print("O Fibonacci de \(n) é \(fib(n: n))")
 }
-*/
 
 func isPrimo(number: Int) -> Bool {
     var isPrimo = true
@@ -286,6 +282,7 @@ func isPrimo(number: Int) -> Bool {
  
  Construa um programa que lê um número N a partir do teclado e calcula todos os números primos entre 2 e N
 
+ */
 let optionalStrN = readLine()
 if let n = Int(optionalStrN!) {
     for i in 2...n {
@@ -295,7 +292,6 @@ if let n = Int(optionalStrN!) {
     }
 }
 
-*/
 
 func getDivisores(n: Int) -> [Int] {
     var divisores:[Int] = []
@@ -311,6 +307,8 @@ func getDivisores(n: Int) -> [Int] {
  
  Faça seu programa imprimir todos os divisores de todos os números de 1 a um N lido a partir do teclado. Você não precisa levar em conta nem o 1 nem o próprio número como divisores. Apresente essa informação para o usuário após dizer para ele que o número não é primo.
 
+ */
+
 let optionalStrN = readLine()
 if let n = Int(optionalStrN!) {
     for i in 2...n {
@@ -322,8 +320,6 @@ if let n = Int(optionalStrN!) {
         }
     }
 }
-
-*/
 
 func mediaAte(final: Int) -> Double {
     var sum = 0
@@ -339,20 +335,20 @@ func mediaAte(final: Int) -> Double {
  
  Dado um número N, fornecido pelo usuário, calcule todas as médias aritméticas dos números entre 1 e j, para todo número j tal que j <= N.
 
+ */
+ 
 let optionalStrN = readLine()
 if let n = Int(optionalStrN!) {
     for i in 1...n {
         print("Média 1 até \(i) é \(mediaAte(final: i))");
     }
 }
- 
-*/
 
 /*
  
  Crie um programa que constrói uma tabela de multiplicação. Por exemplo, para um N = 4, a tabela de multiplicação correspondente é a seguinte:  Note que, em uma célula qualquer (x,y), o valor armazenado é igual a x * y. Seu programa deve receber o valor de N como entrada e produzir uma tabela como essa, organizada. Não se preocupe, porém, se o valor de N for grande demais para apresentar a tabela de forma arrumada.
  
- 
+ */
 
 
 let optionalStrN = readLine()
@@ -365,7 +361,6 @@ if let n = Int(optionalStrN!) {
     }
 }
 
-*/
 
 func getAsteristicos(quantidade: Int, caracteres: Int) -> String {
     var output = ""
